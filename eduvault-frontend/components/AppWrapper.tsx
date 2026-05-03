@@ -60,7 +60,7 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
               { href: "/terms", label: "Terms of Service" },
             ]}
             copyright={{
-              text: "© 2024 EduVault",
+              text: `© ${new Date().getFullYear()} EduVault`,
               license: "All rights reserved",
             }}
           />
