@@ -49,7 +49,7 @@ export default function ContactPage() {
            <ContactInfoCard 
              icon={<Phone className="w-6 h-6" />}
              title="Academic Hotline"
-             value="+1 (888) EDU-VAULT"
+             value="+977 1-4223344"
              color="purple"
            />
            <ContactInfoCard 

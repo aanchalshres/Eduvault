@@ -23,7 +23,7 @@ const Navbar1 = () => {
 
   return (
     <div className="flex justify-center w-full py-4 px-4 sticky top-0 z-40">
-      <div className="flex items-center justify-between px-5 py-3 bg-[#09090B]/95 backdrop-blur-xl rounded-full shadow-2xl border border-white/10 w-full max-w-4xl relative">
+      <div className="flex items-center justify-between px-5 py-3 bg-white/95 backdrop-blur-xl rounded-full shadow-lg border border-slate-200 w-full max-w-4xl relative">
 
         {/* Logo */}
         <Link href="/" className="flex items-center gap-3 no-underline group shrink-0">
@@ -46,8 +46,8 @@ const Navbar1 = () => {
               </defs>
             </svg>
           </motion.div>
-          <span className="text-lg font-black tracking-tighter text-white hidden sm:block">
-            EDU<span className="text-purple-400">VAULT</span>
+          <span className="text-lg font-black tracking-tighter text-slate-900 hidden sm:block">
+            EDU<span className="text-purple-600">VAULT</span>
           </span>
         </Link>
 
@@ -68,7 +68,7 @@ const Navbar1 = () => {
                   className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-300 no-underline ${
                     isActive
                       ? "bg-purple-600 text-white shadow-[0_0_14px_rgba(168,85,247,0.45)]"
-                      : "text-zinc-400 hover:text-white hover:bg-white/8"
+                      : "text-slate-500 hover:text-slate-900 hover:bg-slate-100"
                   }`}
                 >
                   {item.label}
@@ -97,12 +97,12 @@ const Navbar1 = () => {
 
         {/* Mobile hamburger */}
         <motion.button
-          className="md:hidden flex items-center p-2 rounded-full hover:bg-white/10 transition-colors"
+          className="md:hidden flex items-center p-2 rounded-full hover:bg-slate-100 transition-colors"
           onClick={toggleMenu}
           whileTap={{ scale: 0.9 }}
           aria-label="Toggle menu"
         >
-          <Menu className="h-6 w-6 text-zinc-300" />
+          <Menu className="h-6 w-6 text-slate-700" />
         </motion.button>
       </div>
 
@@ -110,7 +110,7 @@ const Navbar1 = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            className="fixed inset-0 bg-[#09090B] z-50 pt-24 px-6 md:hidden"
+            className="fixed inset-0 bg-white z-50 pt-24 px-6 md:hidden"
             initial={{ opacity: 0, x: "100%" }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
@@ -118,14 +118,14 @@ const Navbar1 = () => {
           >
             {/* Close button */}
             <motion.button
-              className="absolute top-5 right-5 p-2 hover:bg-white/10 rounded-full transition-colors"
+              className="absolute top-5 right-5 p-2 hover:bg-slate-100 rounded-full transition-colors"
               onClick={toggleMenu}
               whileTap={{ scale: 0.9 }}
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.15 }}
             >
-              <X className="h-6 w-6 text-white" />
+              <X className="h-6 w-6 text-slate-900" />
             </motion.button>
 
             {/* Logo repeated in overlay */}
@@ -138,8 +138,8 @@ const Navbar1 = () => {
               <div className="w-8 h-8 rounded-xl bg-purple-600 flex items-center justify-center">
                 <span className="text-xs font-black italic text-white">EV</span>
               </div>
-              <span className="text-lg font-black tracking-tighter text-white">
-                EDU<span className="text-purple-400">VAULT</span>
+              <span className="text-lg font-black tracking-tighter text-slate-900">
+                EDU<span className="text-purple-600">VAULT</span>
               </span>
             </motion.div>
 
@@ -160,7 +160,7 @@ const Navbar1 = () => {
                       className={`flex items-center px-5 py-4 rounded-2xl text-base font-semibold transition-all duration-200 no-underline ${
                         isActive
                           ? "bg-purple-600 text-white shadow-[0_4px_14px_rgba(168,85,247,0.35)]"
-                          : "text-zinc-400 hover:text-white hover:bg-white/8"
+                          : "text-slate-600 hover:text-slate-900 hover:bg-slate-50"
                       }`}
                     >
                       {item.label}
@@ -177,7 +177,7 @@ const Navbar1 = () => {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: 20 }}
                 transition={{ delay: 0.45 }}
-                className="pt-4 border-t border-white/10 mt-2"
+                className="pt-4 border-t border-slate-100 mt-2"
               >
                 <Link
                   href="/login"
