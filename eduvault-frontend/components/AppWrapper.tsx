@@ -25,7 +25,7 @@ export function AppWrapper({ children }: { children: React.ReactNode }) {
               }}
             />
           )}
-          <div className="relative z-10">
+          <div className="relative z-10 max-w-7xl mx-auto w-full">
             {children}
           </div>
         </main>
