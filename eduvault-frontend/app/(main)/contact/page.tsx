@@ -61,7 +61,7 @@ export default function ContactPage() {
            <ContactInfoCard 
              icon={<MapPin className="w-6 h-6" />}
              title="HQ Location"
-             value="Silicon Valley, CA"
+             value="Kathmandu, Nepal 🇳🇵"
              color="emerald"
            />
            
