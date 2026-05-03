@@ -1,0 +1,12 @@
+vendor
+node_modules
+.git
+.env
+storage/logs/*.log
+storage/framework/sessions/*
+storage/framework/views/*
+storage/framework/cache/*
+.phpunit.result.cache
+DockerFile
+Procfile
+error.log

@@ -13,6 +13,7 @@ EduVault is a premium, state-of-the-art tuition management platform integrated w
 - **Course Marketplace**: Premium academic content across multiple disciplines.
 - **Premium UI/UX**: Modern design with dark mode, glassmorphism, and smooth animations.
 - **Responsive Design**: Fully optimized for mobile, tablet, and desktop viewports.
+- **Always-On Backend**: Optimized for zero cold-starts on Cloud Run.
 
 ## 🛠️ Tech Stack
 
@@ -24,18 +25,19 @@ EduVault is a premium, state-of-the-art tuition management platform integrated w
 - **Type Safety**: TypeScript
 
 ### Backend
-- **Framework**: FastAPI (Python 3.11+)
-- **Validation**: Pydantic v2
-- **Server**: Uvicorn
-- **Asynchronous**: Built on `asyncio` for high performance
+- **Framework**: Laravel 12 (PHP 8.2)
+- **Infrastructure**: Apache (Dockerized)
+- **API**: RESTful JSON API
+- **Deployment**: Google Cloud Run (Containerized)
 
 ## 📦 Project Structure
 
 ```text
 /
-├── backend/            # FastAPI application
-│   ├── main.py         # API entry point & logic
-│   └── requirements.txt # Python dependencies
+├── backend-laravel/    # Laravel backend application
+│   ├── app/            # Core logic (Controllers, Models)
+│   ├── routes/         # API & Web routes
+│   └── Dockerfile      # Production deployment configuration
 ├── eduvault-frontend/  # Next.js application
 │   ├── app/            # App router pages & layouts
 │   ├── components/     # Reusable UI components
@@ -46,11 +48,10 @@ EduVault is a premium, state-of-the-art tuition management platform integrated w
 ## 🛠️ Local Setup
 
 ### Backend
-1. Navigate to `backend/`
-2. Create a virtual environment: `python -m venv venv`
-3. Activate it: `venv\Scripts\activate` (Windows) or `source venv/bin/activate` (Mac/Linux)
-4. Install dependencies: `pip install -r requirements.txt`
-5. Start the server: `python main.py` or run `run.bat`
+1. Navigate to `backend-laravel/`
+2. Install PHP dependencies: `composer install`
+3. Generate application key: `php artisan key:generate`
+4. Start the server: `php artisan serve`
 
 ### Frontend
 1. Navigate to `eduvault-frontend/`
@@ -60,15 +61,14 @@ EduVault is a premium, state-of-the-art tuition management platform integrated w
 
 ## ☁️ Deployment
 
-The project is configured for deployment on **Google Cloud Run** using Google Cloud Buildpacks.
+The project is deployed on **Google Cloud Run**.
 
 ```bash
-# Deploy Backend
-gcloud run deploy eduvault-backend --source backend/ --region us-central1
+# Deploy Backend (Laravel)
+gcloud run deploy eduvault-laravel-backend --source . --region us-central1 --min-instances 1
 
-# Deploy Frontend
-gcloud run deploy eduvault-frontend --source eduvault-frontend/ --region us-central1
+# Deploy Frontend (Next.js)
+gcloud run deploy eduvault-frontend --source . --region us-central1
 ```
 
 ---
-

@@ -1,4 +1,4 @@
-export const API_BASE_URL = 'https://eduvault-backend-337943981820.us-central1.run.app';
+export const API_BASE_URL = 'https://eduvault-laravel-backend-337943981820.us-central1.run.app/api';
 
 export class ApiService {
   static async request(endpoint: string, options: RequestInit = {}) {
