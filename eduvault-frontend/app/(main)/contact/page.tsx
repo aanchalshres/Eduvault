@@ -31,7 +31,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="flex flex-col gap-16 py-6 animate-in fade-in duration-700 max-w-6xl">
+    <div className="flex flex-col gap-16 py-6 animate-in fade-in duration-700 max-w-6xl mx-auto w-full">
       <header className="text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-accent-blue/10 text-accent-blue text-[10px] font-black uppercase tracking-widest mb-6">
           <MessageSquare className="w-3 h-3" />

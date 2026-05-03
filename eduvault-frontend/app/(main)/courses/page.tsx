@@ -40,7 +40,7 @@ export default function CoursesPage() {
   };
 
   return (
-    <div className="flex flex-col gap-12 py-6 animate-in fade-in duration-700">
+    <div className="flex flex-col gap-12 py-6 animate-in fade-in duration-700 max-w-7xl mx-auto w-full">
       <header>
         <h1 className="text-5xl font-black text-slate-900 tracking-tighter mb-3">Academic Excellence</h1>
         <p className="text-xl text-slate-500 font-medium max-w-3xl leading-relaxed">

@@ -45,7 +45,7 @@ export default function SchedulePage() {
   };
 
   return (
-    <div className="flex flex-col gap-12 py-6 animate-in fade-in duration-700 max-w-4xl">
+    <div className="flex flex-col gap-12 py-6 animate-in fade-in duration-700 max-w-4xl mx-auto w-full">
       <header>
         <h1 className="text-5xl font-black text-slate-900 tracking-tighter mb-3 text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500">
           Book Private Session

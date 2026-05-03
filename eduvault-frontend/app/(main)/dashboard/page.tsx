@@ -9,7 +9,7 @@ export default function DashboardPage() {
   const { state } = useAppState();
 
   return (
-    <div className="flex flex-col gap-12 py-6 animate-in fade-in duration-700">
+    <div className="flex flex-col gap-12 py-6 animate-in fade-in duration-700 max-w-7xl mx-auto w-full">
       <header className="flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div>
           <h1 className="text-5xl font-black text-slate-900 tracking-tighter mb-2">Student Dashboard</h1>
