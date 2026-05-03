@@ -5,7 +5,6 @@ EduVault is a premium, state-of-the-art tuition management platform integrated w
 ## 🚀 Live Demo
 
 - **Frontend**: [https://eduvault-frontend-337943981820.us-central1.run.app](https://eduvault-frontend-337943981820.us-central1.run.app)
-- **Backend API**: [https://eduvault-backend-337943981820.us-central1.run.app](https://eduvault-backend-337943981820.us-central1.run.app)
 
 ## ✨ Features
 
@@ -72,4 +71,4 @@ gcloud run deploy eduvault-frontend --source eduvault-frontend/ --region us-cent
 ```
 
 ---
-Built with ❤️ by Antigravity AI
+
