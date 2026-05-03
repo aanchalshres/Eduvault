@@ -18,6 +18,8 @@ interface StateContextType {
   enrollCourse: (courseId: string) => void;
   addSession: (session: any) => void;
   addChatMessage: (msg: ChatMessage) => void;
+  isSidebarOpen: boolean;
+  setSidebarOpen: (open: boolean) => void;
 }
 
 const defaultState: AppState = {
@@ -34,6 +36,7 @@ const StateContext = createContext<StateContextType | undefined>(undefined);
 export function StateProvider({ children }: { children: React.ReactNode }) {
   const [state, setState] = useState<AppState>(defaultState);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   useEffect(() => {
     const savedUser = localStorage.getItem('ev_user');
@@ -78,7 +81,15 @@ export function StateProvider({ children }: { children: React.ReactNode }) {
   if (!isLoaded) return null; // Avoid hydration mismatch
 
   return (
-    <StateContext.Provider value={{ state, updateState, enrollCourse, addSession, addChatMessage }}>
+    <StateContext.Provider value={{ 
+      state, 
+      updateState, 
+      enrollCourse, 
+      addSession, 
+      addChatMessage,
+      isSidebarOpen,
+      setSidebarOpen
+    }}>
       {children}
     </StateContext.Provider>
   );
